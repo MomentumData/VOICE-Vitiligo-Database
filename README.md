@@ -5,13 +5,17 @@ Repository for Vitiligo Registry and Bio-Resource (VOICE) Database
 
 ## Database Overview
 
-The Vitiligo Registry and Bio-Resource (VOICE) is a prospectively-collected dataset of individuals attending a specialist teriary vitiligo clinic. The dataset captures deep phenotyping information alongside details of treatment, disease impact and Vitiligo Extent Score (VES).<sup>[1]</sup> Data collection began in June 2020 and is ongoing, with the dataset comprising **585** individuals as of last data extraction in September 2024.
+The Vitiligo Registry and Bio-Resource (VOICE) is a prospectively-collected dataset of individuals attending a specialist teriary vitiligo clinic. The dataset captures deep phenotyping information alongside details of treatment, disease impact and Vitiligo Extent Score (VES).<sup>[1]</sup> Data collection began in June 2020 and is ongoing, with the dataset comprising **585** individuals as of latest data extraction in September 2024.
 
 ## Data Cleaning
 
-Data cleaning has been performed in Momentum Data's Secure Data Environment (SDE) using R version 4.5.0.
+Data cleaning was performed in Momentum Data's Secure Data Environment (SDE) using R version 4.5.0.
 
-The goal of data cleaning is to 
+To preserve data fidelity, impossible or inconsistent values were repaired wherever possible (e.g., repairing dates by cross-referencing against other sources, or liaising directly with the clinic).
+
+Comorbidity data were cleaned manually, using pattern-matching to identify close matches where disease names varied or were spelled differently (e.g., hayfever vs. allergic rhinitis; en-US [_anemia_] vs. en-GB [_anaemia_]), and replacing with consistent naming/spelling.
+
+Clinical assessment records were de-duplicated by selecting those with the maximum available data, de-prioritising rows with greater missingness
 
 ## Cohort Profile
 
