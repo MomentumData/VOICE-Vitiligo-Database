@@ -15,4 +15,4 @@ Age of onset is self-reported by individuals attending the clinic based on when 
 
 ## References
 1. van Geel, N., Lommerts, J., Bekkenk, M., Wolkerstorfer, A., Prinsen, C. A. C., Eleftheriadou, V., Taïeb, A., Picardo, M., Ezzedine, K., & Speeckaert, R. (2016). Development and Validation of the Vitiligo Extent Score (VES): an International Collaborative Initiative. The Journal of Investigative Dermatology, 136(5), 978–984. https://doi.org/10.1016/j.jid.2015.12.040
-2. Jin, Y., Roberts, G. H., Ferrara, T. M., Ben, S., van Geel, N., Wolkerstorfer, A., ... & Spritz, R. A. (2019). Early-onset autoimmune vitiligo associated with an enhancer variant haplotype that upregulates class II HLA expression. Nature Communications, 10(1), 391.
+2. Jin, Y., Roberts, G. H., Ferrara, T. M., Ben, S., van Geel, N., Wolkerstorfer, A., ... & Spritz, R. A. (2019). Early-onset autoimmune vitiligo associated with an enhancer variant haplotype that upregulates class II HLA expression. Nature Communications, 10(1), 391. https://doi.org/10.1038/s41467-019-08337-4
