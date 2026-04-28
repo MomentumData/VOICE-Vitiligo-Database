@@ -4,11 +4,11 @@ Repository for Vitiligo Registry and Bio-Resource (VOICE) Database
 
 ## Database Overview
 
-The Vitiligo Registry and Bio-Resource (VOICE) is a prospectively-collected dataset of individuals attending a specialist teriary vitiligo clinic. The dataset captures deep phenotyping information alongside details of treatment, disease impact and Vitiligo Extent Score (VES)<sup>[1]</sup>
+The Vitiligo Registry and Bio-Resource (VOICE) is a prospectively-collected dataset of individuals attending a specialist teriary vitiligo clinic. The dataset captures deep phenotyping information alongside details of treatment, disease impact and Vitiligo Extent Score (VES).<sup>[1]</sup>
 
 ## Age of Vitiligo Onset
 
-Age of onset is self-reported by individuals attending the clinic based on when symptoms of vitiligo first appeared. The distribution of ages aligns closely with that observed by Jin et al.<sup>[2]</sup>, where distinct haplotypes were found to be associated with early- and late-onset vitiligo. Here we see an early-onset peak at 8.86 years, and late-onset peak at 35.24 years.
+Age of onset is self-reported by individuals attending the clinic based on when symptoms of vitiligo first appeared. The distribution of ages aligns closely with that observed by Jin et al.,<sup>[2]</sup> where distinct haplotypes were found to be associated with early- and late-onset vitiligo. Here we see an early-onset peak at 8.86 years, and late-onset peak at 35.24 years.
 
 ![Bimodal Age of Onset in VOICE Vitiligo Dataset](Media/BimodalAgeOfOnset.png)
 
