@@ -8,7 +8,7 @@ The Vitiligo Registry and Bio-Resource (VOICE) is a prospectively-collected data
 
 ## Age of Vitiligo Onset
 
-Age of onset is self-reported by individuals attending the clinic based on when symptoms of vitiligo first appeared. The distribution of ages aligns closely with that observed by Jin et al., where distinct haplotypes were found to be associated with early- and late-onset vitiligo. Here we see an early-onset peak at 8.86 years, and late-onset peak at 35.24.
+Age of onset is self-reported by individuals attending the clinic based on when symptoms of vitiligo first appeared. The distribution of ages aligns closely with that observed by Jin et al.<sup>[2]</sup>, where distinct haplotypes were found to be associated with early- and late-onset vitiligo. Here we see an early-onset peak at 8.86 years, and late-onset peak at 35.24 years.
 
 ![Bimodal Age of Onset in VOICE Vitiligo Dataset](Media/BimodalAgeOfOnset.png)
 
