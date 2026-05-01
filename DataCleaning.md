@@ -30,6 +30,16 @@ To maintain data fidelity across overlapping database snapshots, the pipeline ap
 * **Outlier & Format Handling:** Cleaned alphanumeric results (e.g., ">50", "Jan-80" for ANA titres). Extreme outliers implausible for routine vitiligo care (e.g., transient acute liver injury markers during A&E admissions) were isolated and removed to avoid skewing longitudinal baselines.
 * **Reference Range Classification:** Applied clinical reference ranges based on GSTT (Guy's and St Thomas') guidelines to classify results as *Normal*, *High*, *Low*, *Deficient*, or *Borderline*. Reference ranges were dynamically applied based on the patient's age and ethnicity at the time of the test (crucial for metrics like Serum B12, Albumin, ALP, and MMA).
 
+#### Blood Biomarker Reference Ranges
+Clinical reference ranges for laboratory values were applied dynamically based on patient age, sex, and ethnicity. The ranges were sourced from standard NHS and pathology guidelines, primarily Guy's and St Thomas' (GSTT) / Synnovis:
+* **General Biochemistry & Immunology (Albumin, ALP, ALT, Bilirubin, TSH, Anti-TPO, Serum B12):** [Synnovis GSTT Reference Ranges](https://www.synnovis.co.uk/gstt-refranges)
+* **Thyroid Stimulating Hormone (TSH) Specifics:** [Synnovis Chemistry Reference Intervals v5 (PDF)](https://www.synnovis.co.uk/sites/default/files/upload/Quality/BSL-ALL-CHEM-INST3%20Chemistry%20Reference%20Intervals%20v5.pdf)
+* **Acetylcholine Receptor Antibodies:** [Oxford University Hospitals (OUH) Test Catalogue](https://www.ouh.nhs.uk/immunology/diagnostic-tests/tests-catalogue/acetylcholine-receptor-antibodies/)
+* **Anti-Thyroglobulin Antibodies:** Consolidated ranges informed by [North West London Pathology](https://www.nwlpathology.nhs.uk/tests-database/anti-thyroglobulin-antibodies/), [Medscape](https://emedicine.medscape.com/article/2086819-overview), and [Thyroid UK](https://thyroiduk.org/the-basics/thyroid-antibodies/).
+* **Active B12 (Holotranscobalamin):** [Synnovis Test Catalogue - Active B12](https://www.synnovis.co.uk/our-tests/active-b12-holotc)
+* **Methylmalonic Acid (MMA):** [Synnovis Test Catalogue - MMA](https://www.synnovis.co.uk/our-tests/methylmalonic-acid)
+* **25-Hydroxy Vitamin D:** [Synnovis Test Catalogue - Vitamin D (NICE Guidelines)](https://www.synnovis.co.uk/our-tests/25-oh-vitamin-d)
+
 ### 5. Clinical Assessments & Vitiligo Extent Score (VES)
 * **Deduplication:** Where conflicting VES scores appeared on the same day, the highest score was retained, as lower scores were found to represent incomplete/missing sub-region assessments.
 * **Date Correction:** Manually investigated and corrected clear typographical errors in assessment years by cross-referencing longitudinal follow-up intervals and PROMs data collection dates.
