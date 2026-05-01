@@ -9,7 +9,7 @@ The Vitiligo Registry and Bio-Resource (VOICE) is a prospectively-collected data
 
 ## Data Cleaning
 
-Data cleaning was performed in Momentum Data's Secure Data Environment (SDE) using R version 4.5.0: Details can be found in [data cleaning pipeline](DataCleaning.md).
+Data cleaning was performed in Momentum Data's Secure Data Environment (SDE) using R version 4.5.0. Details can be found here: [Data Cleaning Pipeline](DataCleaning.md).
 
 ## Cohort Profile
 
