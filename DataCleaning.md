@@ -1,6 +1,6 @@
 # Vitiligo Registry and Bio-resource (VOICE) - Data Cleaning Pipeline
 
-This file details the data preparation and cleaning pipeline for the VOICE database. Data cleaning was built and run in R version 4.5.0, and drew primarily on the `tidyverse` ecosystem for data manipulation, `lubridate` for date handling and temporal calculations, and custom logic for clinical string mapping. The raw database comprised multiple overlapping snapshots, including data from separate hospital systems where data collection and warehousing infrastructure have changed since the start of data collection. A key aspect of data cleaning was to reconcile, de-duplicate and harmonise these data sources.
+This file details the data preparation and cleaning pipeline for the VOICE database. Data cleaning was built and run in R version 4.5.0, and drew primarily on the `tidyverse` ecosystem for data manipulation, `lubridate` for date handling and temporal calculations, and custom logic for clinical string mapping. The raw database comprised multiple overlapping snapshots, including data from separate hospital systems where data collection and warehousing infrastructure continued to evolve during data collection. A key aspect of data cleaning was to reconcile, de-duplicate and harmonise these data sources.
 
 ---
 
