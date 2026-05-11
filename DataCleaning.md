@@ -9,7 +9,7 @@ This file details the data preparation and cleaning pipeline for the VOICE datab
 To maintain data fidelity across overlapping database snapshots, the pipeline applies de-confliction rules, normalizes clinical terminology, and maps raw values to standardized clinical thresholds.
 
 ### 1. Patient Demographics & Cohort Derivation
-* **De-conflicting Overlapping Records:** Demographic data (DoB, Sex, Ethnicity) appearing in multiple data sources were reconciled. Priority was given to the most recent data to correct legacy dummy dates (e.g., mid-year placeholders) found in earlier database snapshots.
+* **De-conflicting Overlapping Records:** Demographic data (DoB, Sex, Ethnicity) appearing in multiple data sources were reconciled. Priority was given to the most recent data to correct legacy dummy dates (e.g., mid-year placeholders).
 * **Ethnicity Standardization:** Free-text entries were mapped to standard 16-category and 5-category groupings.
 * **Site of Onset Processing:** Complex, multi-site free-text strings were tokenized, cleaned, and simplified. The script derives binary flags for facial onset and identifies the most common presentation sites across the cohort.
 * **Age Derivation:** Age of onset and age at diagnosis were recalculated against the corrected Dates of Birth to resolve chronological conflicts.
