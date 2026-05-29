@@ -17,10 +17,7 @@ Data cleaning was performed in Momentum Data's Secure Data Environment (SDE) usi
 
 The dataset represents a balanced cohort of participants with the following high-level characteristics:
 
-* **Gender Distribution:**
-  * 56% Female
-  * 44% Male
-* **Fitzpatrick Skin Phototype**
+* **Fitzpatrick Skin Phototype (n):**
   * I - 11
   * II - 60
   * III - 67
@@ -28,7 +25,9 @@ The dataset represents a balanced cohort of participants with the following high
   * V - 170
   * VI - 76
   * Unknown - 104
-* **Baseline Characteristics**
+* **Gender Distribution (%):**
+  * Female - 56%
+* **Baseline Characteristics (%)**
   * Autoimmune Thyroid Disease - 11.62%
   * Atopic Dermatitis - 14.36%
   * Family History of Vitiligo - 29.57%
@@ -40,6 +39,7 @@ The dataset represents a balanced cohort of participants with the following high
 Age of onset is self-reported by individuals attending the clinic based on when symptoms of vitiligo first appeared. The distribution of ages aligns closely with that observed by Jin et al.,<sup>[2]</sup> where distinct haplotypes were found to be associated with early- and late-onset vitiligo. Here we see an early-onset peak at **8.86 years**, and late-onset peak at **35.24 years**.
 
 ![Bimodal Age of Onset in VOICE Vitiligo Dataset](Media/BimodalAgeOfOnset.png)
+The distribution of vitiligo age of onset and resultant finite mixture model for n = 566 people in the VOICE dataset with a recorded age of onset. The blue line shows the overall distribution, the red line shows the early-onset distribution (mean 8.86, SD 4.49 years; 30.55%), and the green line shows the late-onset distribution (mean 35.24, SD 15.34 years; 69.45%)
 
 ## References
 1. van Geel, N., Lommerts, J., Bekkenk, M., Wolkerstorfer, A., Prinsen, C. A. C., Eleftheriadou, V., Taïeb, A., Picardo, M., Ezzedine, K., & Speeckaert, R. (2016). Development and Validation of the Vitiligo Extent Score (VES): an International Collaborative Initiative. The Journal of Investigative Dermatology, 136(5), 978–984. https://doi.org/10.1016/j.jid.2015.12.040
