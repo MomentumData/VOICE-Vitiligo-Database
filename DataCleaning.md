@@ -22,30 +22,21 @@ To maintain data fidelity across overlapping database snapshots, the pipeline ap
     * *Thyroid:* Differentiated into hypothyroid, hyperthyroid, and unspecified autoimmune thyroid diseases.
 
 ### 3. Treatments and Medications
-* **Classification:** Diverse raw medication strings and historical prescriptions were mapped to standardized treatment classes (e.g., `jak inhibitors`, `phototherapy`, `topical/oral antioxidants`, `topical/oral immunosuppressants`, `topical/oral steroids`).
+* **Classification:** Diverse raw medication strings and historical prescriptions were mapped to standardized treatment classes (e.g., jak inhibitors, phototherapy, topical/oral antioxidants, topical/oral immunosuppressants, topical/oral steroids).
 * **Key Interventions:** Dedicated flags and earliest start dates were derived for targeted therapies of interest, specifically Monobenzyl Ether of Hydroquinone (MBEH) and Phototherapy.
 
 ### 4. Laboratory & Blood Data
 * **Turnaround & Duplication:** Deduplicated tests based on highest priority source, retaining the latest valid result per day per patient. 
 * **Outlier & Format Handling:** Cleaned alphanumeric results (e.g., ">50", "Jan-80" for ANA titres). Extreme outliers implausible for routine vitiligo care (e.g., transient acute liver injury markers during A&E admissions) were isolated and removed to avoid skewing longitudinal baselines.
-* **Reference Range Classification:** Applied clinical reference ranges based on GSTT (Guy's and St Thomas') guidelines to classify results as *Normal*, *High*, *Low*, *Deficient*, or *Borderline*. Reference ranges were dynamically applied based on the patient's age and ethnicity at the time of the test (crucial for metrics like Serum B12, Albumin, ALP, and MMA).
-
-#### Blood Biomarker Reference Ranges
-Clinical reference ranges for laboratory values were applied dynamically based on patient age, sex, and ethnicity. The ranges were sourced from standard NHS and pathology guidelines, primarily Guy's and St Thomas' (GSTT) / Synnovis:
-* **General Biochemistry & Immunology (Albumin, ALP, ALT, Bilirubin, TSH, Anti-TPO, Serum B12):** [Synnovis GSTT Reference Ranges](https://www.synnovis.co.uk/gstt-refranges)
-* **Thyroid Stimulating Hormone (TSH) Specifics:** [Synnovis Chemistry Reference Intervals v5 (PDF)](https://www.synnovis.co.uk/sites/default/files/upload/Quality/BSL-ALL-CHEM-INST3%20Chemistry%20Reference%20Intervals%20v5.pdf)
-* **Acetylcholine Receptor Antibodies:** [Oxford University Hospitals (OUH) Test Catalogue](https://www.ouh.nhs.uk/immunology/diagnostic-tests/tests-catalogue/acetylcholine-receptor-antibodies/)
-* **Anti-Thyroglobulin Antibodies:** Consolidated ranges informed by [North West London Pathology](https://www.nwlpathology.nhs.uk/tests-database/anti-thyroglobulin-antibodies/), [Medscape](https://emedicine.medscape.com/article/2086819-overview), and [Thyroid UK](https://thyroiduk.org/the-basics/thyroid-antibodies/).
-* **Active B12 (Holotranscobalamin):** [Synnovis Test Catalogue - Active B12](https://www.synnovis.co.uk/our-tests/active-b12-holotc)
-* **Methylmalonic Acid (MMA):** [Synnovis Test Catalogue - MMA](https://www.synnovis.co.uk/our-tests/methylmalonic-acid)
-* **25-Hydroxy Vitamin D:** [Synnovis Test Catalogue - Vitamin D (NICE Guidelines)](https://www.synnovis.co.uk/our-tests/25-oh-vitamin-d)
+* **Reference Range Classification:** Clinical reference ranges for laboratory values were applied dynamically based on patient age, sex, and ethnicity where applicable. The ranges were sourced from standard NHS and pathology guidelines, primarily Guy's and St Thomas' (GSTT) / Synnovis, to classify results as *Normal*, *High*, *Low*, *Deficient*, or *Borderline*.
 
 ### 5. Clinical Assessments & Vitiligo Extent Score (VES)
 * **Deduplication:** Where conflicting VES scores appeared on the same day, the highest score was retained, as lower scores were found to represent incomplete/missing sub-region assessments.
 * **Date Correction:** Manually investigated and corrected clear typographical errors in assessment years by cross-referencing longitudinal follow-up intervals and PROMs data collection dates.
 
 ### 6. Patient-Reported Outcome Measures (PROMs)
-* **Orphan Record Resolution:** Psychometric questionnaire records lacking a direct clinical appointment ID were mapped to the nearest clinical assessment date, using a tolerance window of ±60 days.
+* PROMs included the Dermatology Life Quality Index (DLQI), Vitiligo Impact Patient Scale (VIPS), Vitiligo Noticibility Scale (VNS), Brief Illness Perception Questionnaire (BIPQ), Generalised Anxiety Scale 7 (GAD-7), Patient Health Questionnaire 8/9 (PHQ-8/9)
+* **Orphan Record Resolution:** Psychometric questionnaire records lacking a direct clinical appointment ID were mapped to the nearest available clinical assessment, using a tolerance window of ±60 days.
 * **Scoring Normalization:** PHQ-8 and PHQ-9 scale inputs were merged and harmonized into a standardized 8-item score to provide continuous longitudinal tracking of PHQ-8 items.
 
 ---
@@ -57,5 +48,5 @@ The pipeline yields a set of structured, relational data tables for downstream e
 * Comorbidity Table: Comorbidities and year of diagnosis
 * Treatment Table: Longitudinal treatment histories.
 * Blood Table: Cleaned lab values and classifications.
-* Clinical Assessments Table: Cleaned and deduplicated longitudinal clinical assessment data, including clinical markers and Vitiligo Extent Score (VES).
+* Clinical Assessments Table: Cleaned and deduplicated longitudinal clinical assessment data, including clinical markers and VES.
 * Questionnaire Table: Cleaned PROMs (DLQI, VIPS, VNS, BIPQ, GAD7, PHQ8/9).
